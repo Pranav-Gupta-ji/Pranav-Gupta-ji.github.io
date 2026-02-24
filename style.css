@@ -1095,3 +1095,319 @@ footer p {
   font-style: italic;
   letter-spacing: 0.4px;
 }
+
+/* ================= VISITOR STATS SECTION ================= */
+#visitor-stats {
+  background: rgba(26, 31, 47, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+#visitor-stats::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.visitor-stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.visitor-stats-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.visitor-stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.visitor-stats-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--glow-primary);
+  border-color: var(--accent);
+}
+
+.visitor-stats-card:hover::before {
+  opacity: 1;
+}
+
+.visitor-stats-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.visitor-stats-icon i {
+  font-size: 2rem;
+  color: var(--accent);
+  filter: drop-shadow(var(--glow-primary));
+}
+
+.visitor-stats-content {
+  flex: 1;
+}
+
+.visitor-count {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  text-shadow: var(--glow-text);
+  font-family: 'Playfair Display', serif;
+}
+
+.visitor-label {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Progress bar for monthly goal */
+.visitor-progress {
+  max-width: 600px;
+  margin: 50px auto 30px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 15px;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+#progress-percent {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 10px;
+  box-shadow: var(--glow-primary);
+  transition: width 1s ease;
+}
+
+/* ================= LIVE VISITOR COUNTER SECTION ================= */
+#visitor-stats {
+  background: rgba(26, 31, 47, 0.4);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 10%;
+}
+
+.visitor-counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.visitor-counter-card {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 30px;
+  padding: 50px 80px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--glow-primary);
+  max-width: 600px;
+  width: 100%;
+}
+
+.visitor-counter-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--glow-hover);
+}
+
+.visitor-counter-icon {
+  width: 100px;
+  height: 100px;
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent);
+  position: relative;
+}
+
+.visitor-counter-icon i {
+  font-size: 3rem;
+  color: var(--accent);
+  filter: drop-shadow(var(--glow-primary));
+}
+
+.visitor-counter-content {
+  flex: 1;
+  text-align: left;
+}
+
+.visitor-counter-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  text-shadow: var(--glow-text);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 5px;
+}
+
+.visitor-counter-label {
+  color:white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Live badge */
+.live-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--glow-primary);
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; box-shadow: 0 0 20px var(--accent); }
+  100% { opacity: 0.8; }
+}
+
+.pulse-icon {
+  animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 15px var(--accent)); }
+  100% { transform: scale(1); }
+}
+
+/* Live indicator */
+.live-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 1rem;
+}
+
+.live-dot {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1.2); opacity: 0.8; box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#finicount_views {
+  color: rgb(106, 106, 227);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .visitor-counter-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+    gap: 20px;
+  }
+  
+  .visitor-counter-content {
+    text-align: center;
+  }
+  
+  .visitor-counter-number {
+    font-size: 3rem;
+  }
+  
+  .visitor-counter-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .visitor-counter-icon i {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visitor-counter-number {
+    font-size: 2.5rem;
+  }
+  
+  .visitor-counter-label {
+    font-size: 1rem;
+  }
+}
