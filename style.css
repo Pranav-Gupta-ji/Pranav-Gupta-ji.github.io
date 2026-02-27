@@ -615,6 +615,14 @@ h2::after {
   text-align: left;
 }
 
+/* ===== Certificate Button Alignment ===== */
+.cert-card .btn {
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+}
+
 .cert-card i {
   font-size: 2.5rem;
   color: var(--accent);
@@ -639,6 +647,17 @@ h2::after {
   transform: translateY(-8px);
   box-shadow: var(--glow-primary);
   border-color: rgba(99, 102, 241, 0.4);
+}
+
+.cert-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+  border: 1px solid rgba(16, 185, 129, 0.4);
 }
 
 /* ========== WORK/BLOG SECTION ========== */
