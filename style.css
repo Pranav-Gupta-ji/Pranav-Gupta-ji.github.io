@@ -1591,3 +1591,19 @@ html, body {
   max-width: 100%;
   height: auto;
 }
+
+.blog-meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.work-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-card h3 {
+    margin-bottom: 6px;
+}
