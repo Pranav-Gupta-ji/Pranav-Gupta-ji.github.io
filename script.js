@@ -1,8 +1,7 @@
 // Typing Animation
 const roles = [
   "Data Scientist",
-  "ML Engineer",
-  "AI Engineer",
+  "AI/ML Engineer",
   "Python Developer",
   "Agentic AI Developer"
 ];
