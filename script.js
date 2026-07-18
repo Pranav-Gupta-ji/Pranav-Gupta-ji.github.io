@@ -2,8 +2,9 @@
 const roles = [
   "Data Scientist",
   "ML Engineer",
-  "AI Enthusiast",
-  "Python Developer"
+  "AI Engineer",
+  "Python Developer",
+  "Agentic AI Developer"
 ];
 
 let roleIndex = 0;
